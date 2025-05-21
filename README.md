@@ -51,6 +51,13 @@ MONGODB_URI=your_mongodb_uri
 
 ---
 
+## Deployment
+
+- Frontend: <https://code-levelling-frontend.onrender.com>
+- Backend: <https://code-levelling-backend-5m1g.onrender.com>
+
+---
+
 ## 📬 Notifications
 
 The platform supports both **email** and **in-app** notifications. Users receive alerts for key events such as:
