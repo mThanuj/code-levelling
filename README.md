@@ -32,7 +32,7 @@ Code Levelling is a gamified coding platform where users gain real-world skills 
 ```bash
 git clone https://github.com/Jeevankiran1503/code-levelling.git
 cd code-levelling
-npm install
+docker compose up --build
 ```
 
 ### Development
@@ -43,12 +43,10 @@ npm run dev
 
 ### Environment Variables
 
-Make a `.env` file and include your credentials here:
+Make a `.env` file and include your Variables here:
 
 ```env
 MONGODB_URI=your_mongodb_uri
-JWT_SECRET=your_secret
-EMAIL_API_KEY=your_email_key
 ```
 
 ---
