@@ -1,0 +1,36 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    develop:
+      watch:
+        - action: sync+restart
+          path: ./backend
+          target: /backend
+          ignore:
+            - node_modules/
+            - .git/
+            - Dockerfile
+            - docker-compose.yml
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    develop:
+      watch:
+        - action: sync+restart
+          path: ./frontend
+          target: /frontend
+          ignore:
+            - node_modules/
+            - .git/
+            - Dockerfile
+            - docker-compose.yml
